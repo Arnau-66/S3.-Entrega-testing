@@ -1,12 +1,9 @@
 // Exercise 1: Get the array of all directors.
 
-const directorsArray = getAllDirectors(movies);
-
 function getAllDirectors(movies) {
   return movies.map(movie => movie.director);
 }
 
-console.log(directorsArray);
 
 // Exercise 2: Get the films of a certain director
 function getMoviesFromDirector(array, director) {

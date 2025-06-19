@@ -16,7 +16,7 @@ function moviesAverageOfDirector(movies, director) {
   const moviesByDirector = movies.filter(movie => movie.director === director);
   if (moviesByDirector.length === 0) return 0;
 
-  const totalScore = moviesByDirector.reduce((sum, movie) => sum + movie.score, 0);
+  const totalScore = moviesByDirector.reduce((acc, movie) => acc + movie.score, 0);
   const average = totalScore / moviesByDirector.length;
   return Number(average.toFixed(2));
 }
@@ -49,7 +49,7 @@ function moviesAverageByCategory(movies, category) {
   const filteredMovies = movies.filter(movie => movie.genre.includes(category));
   if (filteredMovies.length === 0) return 0;
 
-  const totalScore = filteredMovies.reduce((sum, movie) => sum + movie.score, 0);
+  const totalScore = filteredMovies.reduce((acc, movie) => acc + movie.score, 0);
   const averageScore = totalScore / filteredMovies.length;
   return Number(averageScore.toFixed(2));
 
